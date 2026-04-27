@@ -1,0 +1,197 @@
+/* BASE */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f7f9fb;
+    color: #2c2c2c;
+    line-height: 1.7;
+}
+
+/* HEADER (ACADEMY STYLE) */
+header {
+    background: linear-gradient(135deg, #1b5e20, #43a047);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    padding: 4px 10px;   /* very small height */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0px;
+}
+
+/* NAV */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* PAGE CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* HEADINGS */
+h1 {
+	margin-top: 0;
+    color: #FFFFFF;
+}
+
+h2, h3 {
+    color: #1b5e20;
+}
+
+p {
+    line-height: 1.7;
+	margin: 0;
+    font-size: 16px;
+}
+
+/* PREMIUM CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: #1b5e20;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #145a18;
+}
+
+/* FOOTER */
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
+
+.whatsapp-float:hover {
+    background: #1ebe5d;
+}
+
+
+.site-footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 60px;
+}
+
+.footer-links {
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.85;
+}
+
+.social-links img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
