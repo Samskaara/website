@@ -15,14 +15,15 @@ header {
     top: 0;
     z-index: 1000;
     text-align: center;
-    padding: 4px 10px;   /* very small height */
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    padding: 8px 10px;   /* slightly increased but balanced */
 }
 
 .logo {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 0px;
+    position: absolute;
+    left: 20px;     /* move to left */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;   /* increase safely */
 }
 
 /* NAV */
@@ -194,4 +195,120 @@ html {
 .social-links img:hover {
     transform: scale(1.15);
     opacity: 1;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 10px 8px;
+    }
+
+    .logo {
+        width: 55px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* stack cards */
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 14px;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .container {
+        padding: 40px 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* STORY SECTION */
+.story-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Alternate layout */
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image styling */
+.story-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Text styling */
+.story-text {
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .story-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-block.reverse {
+        flex-direction: column;
+    }
+}
+
+.story-image img {
+    transition: transform 0.3s ease;
+}
+
+.story-image img:hover {
+    transform: scale(1.05);
 }
